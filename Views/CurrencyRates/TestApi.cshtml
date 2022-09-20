@@ -1,0 +1,9 @@
+﻿@using InsertRekrutacja.Models
+@model NBPCurrencyTable
+
+<ul>
+    @foreach (NBPCurrencyRate c in Model.Rates)
+    {
+        <li>@c.Code : @c.Mid </li>
+    }
+</ul>

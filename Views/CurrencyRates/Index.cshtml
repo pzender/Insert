@@ -1,0 +1,24 @@
+﻿@using InsertRekrutacja.Models
+@model IEnumerable<CurrencyRate>
+@{
+    Layout = "_Layout";
+}
+<h1>NBP currency rates</h1>
+
+    <table>
+        <tr>
+            <th>Currency</th>
+            <th>Avg rate (PLN)</th>
+            <th>Rated on</th>
+        </tr>
+    @foreach (CurrencyRate c in Model)
+    {
+        <tr>
+                <td>@c.Code</td>
+                <td>@c.AvgRate</td>
+                <td>@c.Date.ToString()</td>
+        </tr>
+    }
+    </table>
+
+    <span>Last updated on @DateTime.Now</span>
